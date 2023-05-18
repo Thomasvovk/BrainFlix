@@ -22,35 +22,30 @@
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: $font-bold;
-  color: $BrainFlix-Black-color;
 }
 
 @mixin section-header {
   font-size: 0.75rem;
   line-height: 1.25rem;
   font-family: $font-bold;
-  color: $BrainFlix-Black-color;
 }
 
 @mixin subheader {
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-family: $font-bold;
-  color: $BrainFlix-Black-color;
 }
 
 @mixin body-copy {
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-family: $font-regular;
-  color: $BrainFlix-Black-color;
 }
 
 @mixin labels-buttons {
   font-size: 0.625rem;
   line-height: 1.25rem;
   font-family: $font-bold;
-  color: $BrainFlix-Black-color;
 }
 
 // Tablet & Desktop
@@ -59,35 +54,30 @@
   font-size: 2.0625rem;
   line-height: 2.75rem;
   font-family: $font-bold;
-  color: $BrainFlix-Black-color;
 }
 
 @mixin tablet_desktop_section-header {
   font-size: 0.75rem;
   line-height: 1.25rem;
   font-family: $font-bold;
-  color: $BrainFlix-Black-color;
 }
 
 @mixin tablet_desktop_subheader {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-family: $font-bold;
-  color: $BrainFlix-Black-color;
 }
 
 @mixin tablet_desktop_body-copy {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-family: $font-regular;
-  color: $BrainFlix-Black-color;
 }
 
 @mixin tablet_desktop_labels-buttons {
   font-size: 0.75rem;
   line-height: 1.25rem;
   font-family: $font-bold;
-  color: $BrainFlix-Black-color;
 }
 
 //Layout Grid
