@@ -5,12 +5,14 @@ import likeImg from "../../assets/images/icons/likes.svg";
 function Hero() {
   return (
     <section className="hero">
-      <video
-        className="hero__video"
-        controls
-        poster="https://i.imgur.com/l2Xfgpl.jpg"
-        width="100%"
-      />
+      <div className="hero__container">
+        <video
+          className="hero__video"
+          controls
+          poster="https://i.imgur.com/l2Xfgpl.jpg"
+          width="100%"
+        />
+      </div>
       <div className="hero__details">
         <h1 className="hero__title">BMX Rampage: 2021 Highlights</h1>
         <div className="hero__info">

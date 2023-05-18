@@ -4,12 +4,14 @@
 @use "../../styles/partials/variables" as *;
 
 .hero {
-  //   background-color: $BrainFlix-DarkBlack-color;
-  @include desktop {
-    display: flex;
-    justify-content: center;
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
+  &__container {
+    background-color: $BrainFlix-DarkBlack-color;
+    @include desktop {
+      display: flex;
+      justify-content: center;
+      padding-left: 2.25rem;
+      padding-right: 2.25rem;
+    }
   }
   &__video {
     aspect-ratio: 16/9;
@@ -39,6 +41,7 @@
 
     @include tablet {
       @include tablet_desktop_page-header;
+      padding-bottom: 0;
     }
   }
   &__info {
@@ -76,7 +79,6 @@
   }
   &__info-container-views {
     display: flex;
-    align-items: flex-start;
     padding-right: 1rem;
     color: $Silver-color;
 
@@ -86,7 +88,6 @@
   }
   &__info-container-likes {
     display: flex;
-    align-items: flex-start;
     padding-right: 1rem;
     color: $Silver-color;
     @include tablet {
@@ -96,7 +97,6 @@
   &__description {
     color: $BrainFlix-Black-color;
     padding-top: 1rem;
-    @include mobile-grid;
   }
 
   &__description-text {
