@@ -1,0 +1,88 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+
+.video-description {
+  &__details {
+    margin-top: 1.5rem;
+    @include mobile-grid;
+
+    @include tablet {
+      @include tablet-grid;
+    }
+  }
+
+  &__title {
+    @include page-header;
+    font-family: $font-regular;
+    color: $BrainFlix-Black-color;
+    padding-bottom: 1rem;
+
+    @include tablet {
+      @include tablet_desktop_page-header;
+      padding-bottom: 0;
+    }
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+
+    border-top: 2px solid $Mercury-color;
+    border-bottom: 2px solid $Mercury-color;
+    padding-bottom: 1rem;
+
+    @include tablet {
+      border-top: none;
+    }
+  }
+  &__info-container {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.1rem;
+    @include body-copy;
+
+    @include tablet {
+      @include tablet_desktop_body-copy;
+      flex-direction: row;
+    }
+  }
+  &__info-container-name {
+    @include subheader;
+    color: $BrainFlix-Black-color;
+  }
+  &__info-container-date {
+    color: $Silver-color;
+  }
+  &__info-container-views {
+    display: flex;
+    padding-right: 1rem;
+    color: $Silver-color;
+
+    @include tablet {
+      padding-right: 0;
+    }
+  }
+  &__info-container-likes {
+    display: flex;
+    padding-right: 1rem;
+    color: $Silver-color;
+    @include tablet {
+      padding-right: 0;
+    }
+  }
+  &__description {
+    color: $BrainFlix-Black-color;
+    padding-top: 1rem;
+  }
+
+  &__description-text {
+    @include body-copy;
+  }
+  &__info-icon {
+    padding-right: 0.5rem;
+  }
+}
