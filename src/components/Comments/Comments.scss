@@ -1,0 +1,124 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+
+.comments-section {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  @include tablet {
+    @include tablet-grid;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  @include desktop {
+    width: 63.75rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+  &__subheader {
+    @include subheader;
+    color: $BrainFlix-Black-color;
+    padding-top: 1rem;
+
+    @include tablet {
+      @include tablet_desktop_subheader;
+      padding: 0;
+    }
+  }
+  &__profile-image {
+    display: inline-block;
+    object-fit: cover;
+    width: 2.5rem;
+    height: 2.3rem;
+    border-radius: 100%;
+    margin-top: 1rem;
+    margin-right: 1rem;
+
+    @include tablet {
+      width: 3.125rem;
+      height: 3.125rem;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border-bottom: 2px solid $Mercury-color;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    @include tablet {
+    }
+  }
+
+  &__form-title {
+    @include body-copy;
+    color: $Silver-color;
+    @include desktop {
+      @include subheader;
+    }
+  }
+
+  &__input-container {
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+  &__form-card {
+    @include body-copy;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 2.25rem;
+    padding: 0.75rem;
+    border: 1px solid $Mercury-color;
+    border-radius: 0.25rem;
+    background-color: $Alabaster-color;
+    @include tablet {
+      height: 3rem;
+      padding: 1rem;
+    }
+  }
+  &__form-card--size {
+    height: 6.25rem;
+    padding-top: 0;
+    padding-bottom: 3.125rem;
+    @include tablet {
+      height: 2.5rem;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &__form-button {
+    height: 2.5rem;
+    width: 100%;
+    @include body-copy;
+    border: 1px solid $Mercury-color;
+    background-color: $BrainFlix-Blue-color;
+    background-image: url(../../assets/images/icons/add_comment.svg);
+    background-repeat: no-repeat;
+    background-position: 5px 5px;
+    color: $White-color;
+    border-radius: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+
+    @include tablet {
+      margin-left: 1rem;
+      max-width: 10rem;
+    }
+  }
+}
