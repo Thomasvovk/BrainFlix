@@ -59,11 +59,8 @@
   }
 
   &__form-title {
-    @include body-copy;
+    @include subheader;
     color: $Silver-color;
-    @include desktop {
-      @include subheader;
-    }
   }
 
   &__input-container {
