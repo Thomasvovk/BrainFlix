@@ -7,7 +7,7 @@ function Comments() {
   return (
     <>
       <div className="comments-section">
-        <div className="comments-section__details">
+        <section className="comments-section__details">
           <h1 className="comments-section__title">
             BMX Rampage: 2021 Highlights
           </h1>
@@ -52,7 +52,7 @@ function Comments() {
               second time -- eight years after his first Red Cow Rampage title
             </p>
           </div>
-        </div>
+        </section>
 
         <section className="comments-section__allcomments">
           <h2 className="comments-section__subheader">3 Comments</h2>
