@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Header />
-      <Hero />
+      <Hero heroImage={videoList} />
       <div className="videos-desktop">
         <div className="videos-desktop__left-container">
           <VideoDescription description={videoDescription} />

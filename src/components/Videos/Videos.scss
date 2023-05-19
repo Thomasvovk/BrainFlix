@@ -44,10 +44,12 @@
   }
 
   &__title {
+    color: $BrainFlix-Black-color;
     @include subheader;
   }
 
   &__name {
+    color: $BrainFlix-Black-color;
     @include body-copy;
   }
 }

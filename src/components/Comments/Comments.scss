@@ -153,18 +153,32 @@
     }
   }
   &__container-name {
+    color: $BrainFlix-Black-color;
     @include subheader;
     @include tablet {
       padding-right: 1rem;
+    }
+
+    @include tablet {
+      @include tablet_desktop_subheader;
     }
   }
 
   &__container-date {
     @include body-copy;
     color: $Silver-color;
+
+    @include tablet {
+      @include tablet_desktop_body-copy;
+    }
   }
 
   &__container-text {
+    color: $BrainFlix-Black-color;
     @include body-copy;
+
+    @include tablet {
+      @include tablet_desktop_body-copy;
+    }
   }
 }

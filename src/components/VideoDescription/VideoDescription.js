@@ -2,20 +2,18 @@ import "../VideoDescription/VideoDescription.scss";
 import viewImg from "../../assets/images/icons/views.svg";
 import likeImg from "../../assets/images/icons/likes.svg";
 
-function VideoDescription(props) {
+function VideoDescription({ description }) {
   return (
     <div className="video-description">
       <section className="video-description__details">
-        <h1 className="video-description__title">
-          {props.description[0].title}
-        </h1>
+        <h1 className="video-description__title">{description[0].title}</h1>
         <div className="video-description__info">
           <div className="video-description__info-container">
             <p className="video-description__info-container-name">
-              By {props.description[0].channel}
+              By {description[0].channel}
             </p>
             <p className="video-description__info-container-date">
-              {props.description[0].timestamp}
+              {description[0].timestamp}
             </p>
           </div>
           <div className="video-description__info-container">
@@ -26,7 +24,7 @@ function VideoDescription(props) {
                 alt="view icon"
               />
               <p className="video-description__info-container-data">
-                {props.description[0].views}
+                {description[0].views}
               </p>
             </div>
             <div className="video-description__info-container-likes">
@@ -36,14 +34,14 @@ function VideoDescription(props) {
                 alt="like icon"
               />
               <p className="video-description__info-container-data">
-                {props.description[0].likes}
+                {description[0].likes}
               </p>
             </div>
           </div>
         </div>
         <div className="video-description__description">
           <p className="video-description__description-text">
-            {props.description[0].description}
+            {description[0].description}
           </p>
         </div>
       </section>

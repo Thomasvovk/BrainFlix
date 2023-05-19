@@ -1,12 +1,12 @@
 import "../Videos/Videos.scss";
 
-function Videos(props) {
+function Videos({ videoList }) {
   return (
     <section className="videos">
       <div className="videos__list">
         <h2 className="videos__subheader">NEXT VIDEOS</h2>
         <div className="videos__container">
-          {props.videoList.map((video) => {
+          {videoList.map((video) => {
             return (
               <div className="videos__item">
                 <div className="videos__block">

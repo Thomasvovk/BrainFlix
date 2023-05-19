@@ -1,7 +1,7 @@
 import "../Comments/Comments.scss";
 import profileImage from "../../assets/images/Mohan-muruge.jpg";
 
-function Comments(props) {
+function Comments({ comment }) {
   return (
     <>
       <section className="comments-section">
@@ -40,14 +40,14 @@ function Comments(props) {
             <div className="comments-section__container-info">
               <div className="comments-section__container-block">
                 <p className="comments-section__container-name">
-                  {props.comment[0].comments[0].name}
+                  {comment[0].comments[0].name}
                 </p>
                 <p className="comments-section__container-date">
-                  {props.comment[0].comments[0].timestamp}
+                  {comment[0].comments[0].timestamp}
                 </p>
               </div>
               <p className="comments-section__container-text">
-                {props.comment[0].comments[0].comment}
+                {comment[0].comments[0].comment}
               </p>
             </div>
           </div>
@@ -59,14 +59,14 @@ function Comments(props) {
             <div className="comments-section__container-info">
               <div className="comments-section__container-block">
                 <p className="comments-section__container-name">
-                  {props.comment[0].comments[1].name}
+                  {comment[0].comments[1].name}
                 </p>
                 <p className="comments-section__container-date">
-                  {props.comment[0].comments[0].timestamp}
+                  {comment[0].comments[0].timestamp}
                 </p>
               </div>
               <p className="comments-section__container-text">
-                {props.comment[0].comments[1].comment}
+                {comment[0].comments[1].comment}
               </p>
             </div>
           </div>
@@ -78,14 +78,14 @@ function Comments(props) {
             <div className="comments-section__container-info">
               <div className="comments-section__container-block">
                 <p className="comments-section__container-name">
-                  {props.comment[0].comments[1].name}
+                  {comment[0].comments[1].name}
                 </p>
                 <p className="comments-section__container-date">
-                  {props.comment[0].comments[2].timestamp}
+                  {comment[0].comments[2].timestamp}
                 </p>
               </div>
               <p className="comments-section__container-text">
-                {props.comment[0].comments[2].comment}
+                {comment[0].comments[2].comment}
               </p>
             </div>
           </div>
