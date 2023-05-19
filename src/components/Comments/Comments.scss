@@ -13,9 +13,6 @@
       padding-bottom: 1rem;
     }
     @include desktop {
-      width: 63.75rem;
-      margin-left: auto;
-      margin-right: auto;
       padding: 0;
     }
   }
@@ -28,6 +25,9 @@
     @include tablet {
       @include tablet_desktop_subheader;
       padding: 0;
+    }
+    @include desktop {
+      padding-bottom: 1.25rem;
     }
   }
   &__profile-image {
@@ -54,7 +54,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    border-bottom: 2px solid $Mercury-color;
+    border-bottom: 1px solid $Mercury-color;
     padding-top: 1rem;
     padding-bottom: 1rem;
     @include tablet {
@@ -126,7 +126,7 @@
     display: flex;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    border-bottom: 2px solid $Mercury-color;
+    border-bottom: 1px solid $Mercury-color;
   }
 
   &__container-profile-img {

@@ -9,6 +9,7 @@
     @include tablet-grid;
     @include desktop {
       @include desktop-grid;
+      border-left: 1px solid $Mercury-color;
     }
   }
   &__list {

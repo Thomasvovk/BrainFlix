@@ -1,0 +1,19 @@
+@use "./styles/partials/mixins" as *;
+@use "./styles/partials/fonts" as *;
+@use "./styles/partials/global" as *;
+@use "./styles/partials/variables" as *;
+
+.videos-desktop {
+  @include desktop {
+    @include desktop-grid;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  &__left-container {
+    @include desktop {
+      flex-direction: column;
+    }
+  }
+}
