@@ -15,7 +15,7 @@ function App() {
       <Hero />
       <div className="videos-desktop">
         <div className="videos-desktop__left-container">
-          <VideoDescription />
+          <VideoDescription description={videoDescription} />
           <Comments comment={videoDescription} />
         </div>
         <Videos videoList={videoList} />
