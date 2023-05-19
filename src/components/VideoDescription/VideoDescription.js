@@ -2,18 +2,18 @@ import "../VideoDescription/VideoDescription.scss";
 import viewImg from "../../assets/images/icons/views.svg";
 import likeImg from "../../assets/images/icons/likes.svg";
 
-function VideoDescription({ description }) {
+function VideoDescription({ starVideo }) {
   return (
     <div className="video-description">
       <section className="video-description__details">
-        <h1 className="video-description__title">{description[0].title}</h1>
+        <h1 className="video-description__title">{starVideo.title}</h1>
         <div className="video-description__info">
           <div className="video-description__info-container">
             <p className="video-description__info-container-name">
-              By {description[0].channel}
+              By {starVideo.channel}
             </p>
             <p className="video-description__info-container-date">
-              {description[0].timestamp}
+              {starVideo.timestamp}
             </p>
           </div>
           <div className="video-description__info-container">
@@ -24,7 +24,7 @@ function VideoDescription({ description }) {
                 alt="view icon"
               />
               <p className="video-description__info-container-data">
-                {description[0].views}
+                {starVideo.views}
               </p>
             </div>
             <div className="video-description__info-container-likes">
@@ -34,14 +34,14 @@ function VideoDescription({ description }) {
                 alt="like icon"
               />
               <p className="video-description__info-container-data">
-                {description[0].likes}
+                {starVideo.likes}
               </p>
             </div>
           </div>
         </div>
         <div className="video-description__description">
           <p className="video-description__description-text">
-            {description[0].description}
+            {starVideo.description}
           </p>
         </div>
       </section>

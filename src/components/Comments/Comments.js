@@ -1,7 +1,7 @@
 import "../Comments/Comments.scss";
 import profileImage from "../../assets/images/Mohan-muruge.jpg";
 
-function Comments({ comment }) {
+function Comments({ starVideo }) {
   return (
     <>
       <section className="comments-section">
@@ -32,62 +32,29 @@ function Comments({ comment }) {
               </label>
             </form>
           </div>
-
-          <div className="comments-section__container">
-            <div className="comments-section__container-profile">
-              <div className="comments-section__container-profile-img"></div>
-            </div>
-            <div className="comments-section__container-info">
-              <div className="comments-section__container-block">
-                <p className="comments-section__container-name">
-                  {comment[0].comments[0].name}
-                </p>
-                <p className="comments-section__container-date">
-                  {comment[0].comments[0].timestamp}
-                </p>
-              </div>
-              <p className="comments-section__container-text">
-                {comment[0].comments[0].comment}
-              </p>
-            </div>
-          </div>
-
-          <div className="comments-section__container">
-            <div className="comments-section__container-profile">
-              <div className="comments-section__container-profile-img"></div>
-            </div>
-            <div className="comments-section__container-info">
-              <div className="comments-section__container-block">
-                <p className="comments-section__container-name">
-                  {comment[0].comments[1].name}
-                </p>
-                <p className="comments-section__container-date">
-                  {comment[0].comments[0].timestamp}
-                </p>
-              </div>
-              <p className="comments-section__container-text">
-                {comment[0].comments[1].comment}
-              </p>
-            </div>
-          </div>
-
-          <div className="comments-section__container">
-            <div className="comments-section__container-profile">
-              <div className="comments-section__container-profile-img"></div>
-            </div>
-            <div className="comments-section__container-info">
-              <div className="comments-section__container-block">
-                <p className="comments-section__container-name">
-                  {comment[0].comments[1].name}
-                </p>
-                <p className="comments-section__container-date">
-                  {comment[0].comments[2].timestamp}
-                </p>
-              </div>
-              <p className="comments-section__container-text">
-                {comment[0].comments[2].comment}
-              </p>
-            </div>
+          <div className="comments-section__posted-container">
+            {starVideo.comments.map((commentObject) => {
+              return (
+                <div className="comments-section__container">
+                  <div className="comments-section__container-profile">
+                    <div className="comments-section__container-profile-img"></div>
+                  </div>
+                  <div className="comments-section__container-info">
+                    <div className="comments-section__container-block">
+                      <p className="comments-section__container-name">
+                        {commentObject.name}
+                      </p>
+                      <p className="comments-section__container-date">
+                        {commentObject.timestamp}
+                      </p>
+                    </div>
+                    <p className="comments-section__container-text">
+                      {commentObject.comment}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
