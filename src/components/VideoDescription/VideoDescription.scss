@@ -16,6 +16,9 @@
     @include tablet {
       @include tablet-grid;
     }
+    @include desktop {
+      margin-right: 0;
+    }
   }
 
   &__title {
@@ -54,6 +57,9 @@
       @include tablet_desktop_body-copy;
       flex-direction: row;
     }
+    @include desktop {
+      padding-right: 1rem;
+    }
   }
   &__info-container-name {
     @include subheader;
@@ -86,6 +92,10 @@
 
   &__description-text {
     @include body-copy;
+
+    @include desktop {
+      padding-right: 1rem;
+    }
   }
   &__info-icon {
     padding-right: 0.5rem;

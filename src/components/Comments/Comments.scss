@@ -14,6 +14,7 @@
     }
     @include desktop {
       padding: 0;
+      margin-right: 0;
     }
   }
 
@@ -38,11 +39,6 @@
     border-radius: 100%;
     margin-top: 1rem;
     margin-right: 1rem;
-
-    @include tablet {
-      width: 3.125rem;
-      height: 3.125rem;
-    }
   }
   &__form {
     display: flex;
@@ -58,6 +54,7 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
     @include tablet {
+      align-items: end;
     }
   }
 
@@ -72,6 +69,9 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-end;
+    }
+    @include desktop {
+      padding-right: 1rem;
     }
   }
   &__form-card {
@@ -89,6 +89,7 @@
       padding: 1rem;
     }
   }
+
   &__form-card--size {
     height: 6.25rem;
     padding-top: 0;
@@ -108,13 +109,13 @@
     background-color: $BrainFlix-Blue-color;
     background-image: url(../../assets/images/icons/add_comment.svg);
     background-repeat: no-repeat;
-    background-position: 5px 5px;
+    background-position: 0.3125rem 0.5625rem;
     color: $White-color;
     border-radius: 0.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 16px;
+    margin-top: 1rem;
 
     @include tablet {
       margin-left: 1rem;
@@ -146,10 +147,10 @@
   &__container-block {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
 
-    @include tablet {
-      justify-content: flex-start;
+    @include desktop {
+      padding-right: 1rem;
     }
   }
   &__container-name {
@@ -180,5 +181,21 @@
     @include tablet {
       @include tablet_desktop_body-copy;
     }
+
+    @include desktop {
+      padding-right: 1rem;
+    }
   }
+}
+
+// Hover States
+
+input:active {
+  border: 2px solid $BrainFlix-Blue-color;
+  background-color: white;
+}
+
+input:focus {
+  border: 2px solid $BrainFlix-Blue-color;
+  background-color: white;
 }

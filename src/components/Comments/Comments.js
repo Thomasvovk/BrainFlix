@@ -45,7 +45,7 @@ function Comments({ starVideo }) {
                         {commentObject.name}
                       </p>
                       <p className="comments-section__container-date">
-                        {commentObject.timestamp}
+                        {new Date(commentObject.timestamp).toLocaleDateString()}
                       </p>
                     </div>
                     <p className="comments-section__container-text">

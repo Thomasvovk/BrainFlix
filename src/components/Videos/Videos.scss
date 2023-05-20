@@ -9,11 +9,18 @@
     @include tablet-grid;
     @include desktop {
       @include desktop-grid;
+      width: 70rem;
       border-left: 1px solid $Mercury-color;
     }
   }
   &__list {
     padding: 1rem;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  @include desktop {
+    padding-left: 1rem;
   }
 
   &__subheader {

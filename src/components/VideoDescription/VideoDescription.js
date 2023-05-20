@@ -13,7 +13,7 @@ function VideoDescription({ starVideo }) {
               By {starVideo.channel}
             </p>
             <p className="video-description__info-container-date">
-              {starVideo.timestamp}
+              {new Date(starVideo.timestamp).toLocaleDateString()}
             </p>
           </div>
           <div className="video-description__info-container">

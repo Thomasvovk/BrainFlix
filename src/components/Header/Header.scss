@@ -58,6 +58,7 @@
     background-repeat: no-repeat;
     padding-left: 2.2rem;
     background-position: 10px 9px;
+    background-color: $Alabaster-color;
     @include tablet {
       width: 50%;
       @include tablet_desktop_body-copy;
@@ -95,4 +96,15 @@
       @include tablet_desktop_body-copy;
     }
   }
+}
+
+//Hover State
+input:active {
+  border: 2px solid $BrainFlix-Blue-color;
+  background-color: white;
+}
+
+input:focus {
+  border: 2px solid $BrainFlix-Blue-color;
+  background-color: white;
 }
