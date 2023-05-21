@@ -5,9 +5,11 @@ import profileImage from "../../assets/images/Mohan-muruge.jpg";
 function Header() {
   return (
     <div className="header">
-      <logo className="header__logo">
-        <img className="header__logo-img" src={logo} alt="Logo" />
-      </logo>
+      <a href="/">
+        <logo className="header__logo">
+          <img className="header__logo-img" src={logo} alt="Logo" />
+        </logo>
+      </a>
       <div className="header__container">
         <input
           className="header__search-input"
