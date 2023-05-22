@@ -6,10 +6,12 @@ function Videos({ updateStarVideo, videoList }) {
       <div className="videos__list">
         <h2 className="videos__subheader">NEXT VIDEOS</h2>
         <div className="videos__container">
+          {/* map loop over next videos */}
           {videoList.map((video) => {
             return (
               <div
                 className="videos__item"
+                // onClick event
                 onClick={() => {
                   updateStarVideo(video.id);
                 }}

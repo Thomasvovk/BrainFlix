@@ -10,6 +10,7 @@ function Header() {
           <img className="header__logo-img" src={logo} alt="Logo" />
         </logo>
       </a>
+      {/* Search Bar  */}
       <div className="header__container">
         <input
           className="header__search-input"
@@ -22,7 +23,7 @@ function Header() {
           src={profileImage}
           alt="profile image"
         />
-
+        {/* Upload Button */}
         <button className="header__button">UPLOAD</button>
       </div>
     </div>

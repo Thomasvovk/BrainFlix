@@ -1,14 +1,16 @@
 import "./App.scss";
 import { useState } from "react";
-import videoList from "./data/videos.json";
-import videoDetails from "./data/video-details.json";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import VideoDescription from "./components/VideoDescription/VideoDescription";
 import Comments from "./components/Comments/Comments";
 import Videos from "./components/Videos/Videos";
+// imported json files
+import videoList from "./data/videos.json";
+import videoDetails from "./data/video-details.json";
 
 function App() {
+  // useState
   const [starVideo, setStarVideo] = useState(videoDetails[0]);
   const updatedVideoList = videoList.filter((video) => {
     return video.id !== starVideo.id;
@@ -21,6 +23,7 @@ function App() {
     setStarVideo(updatedVideo);
   };
   return (
+    // Components with props
     <>
       <Header />
       <Hero starVideo={starVideo} />

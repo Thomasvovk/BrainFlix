@@ -33,6 +33,7 @@ function Comments({ starVideo }) {
             </form>
           </div>
           <div className="comments-section__posted-container">
+            {/* Map loop over my coments  */}
             {starVideo.comments.map((commentObject) => {
               return (
                 <div className="comments-section__container">
