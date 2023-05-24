@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../Header/Header.scss";
 import logo from "../../assets/images/logo/BrainFlix-logo.svg";
 import profileImage from "../../assets/images/Mohan-muruge.jpg";

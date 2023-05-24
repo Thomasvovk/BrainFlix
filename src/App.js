@@ -1,10 +1,12 @@
 import "./App.scss";
 import { useState } from "react";
+import { BrowserRouter, Routes, Route, Link, Navigate } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import VideoDescription from "./components/VideoDescription/VideoDescription";
 import Comments from "./components/Comments/Comments";
 import Videos from "./components/Videos/Videos";
+import Upload from "./components/Upload/Upload";
 // imported json files
 import videoList from "./data/videos.json";
 import videoDetails from "./data/video-details.json";
@@ -25,8 +27,15 @@ function App() {
   return (
     // Components with props
     <>
-      <Header />
-      <Hero starVideo={starVideo} />
+      <BrowserRouter>
+        <Header />
+
+        <Routes>
+          <Route path="/upload" element={<Upload />} />
+        </Routes>
+      </BrowserRouter>
+
+      {/* <Hero starVideo={starVideo} />
       <div className="videos-desktop">
         <div className="videos-desktop__left-container">
           <VideoDescription starVideo={starVideo} />
@@ -36,7 +45,7 @@ function App() {
           updateStarVideo={updateStarVideo}
           videoList={updatedVideoList}
         />
-      </div>
+      </div> */}
     </>
   );
 }

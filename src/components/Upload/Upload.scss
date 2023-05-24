@@ -1,0 +1,160 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+
+.video-upload {
+  padding-top: 1rem;
+  border-top: 1px solid $Mercury-color;
+  @include mobile-grid;
+  @include tablet {
+    @include tablet-grid;
+  }
+  @include desktop {
+    @include desktop-grid;
+  }
+
+  &__title {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    @include page-header;
+    color: $BrainFlix-Black-color;
+    @include tablet {
+      @include tablet_desktop_page-header;
+      border-bottom: 1px solid $Mercury-color;
+      margin-bottom: 2.25rem;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+  &__thumbnail {
+    @include subheader;
+    color: $Silver-color;
+  }
+  @include tablet {
+    @include tablet_desktop_subheader;
+  }
+
+  &__video-title {
+    @include subheader;
+    color: $Silver-color;
+    @include tablet {
+      @include tablet_desktop_subheader;
+    }
+  }
+  &__title-input {
+    width: 100%;
+    padding: 0.5rem;
+    padding-left: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid $Mercury-color;
+    border-radius: 0.25rem;
+    background-color: $Alabaster-color;
+    @include body-copy;
+    color: $BrainFlix-Black-color;
+    margin-bottom: 1.5rem;
+    @include tablet {
+      @include tablet_desktop_body-copy;
+    }
+  }
+
+  &__video-description {
+    @include subheader;
+    color: $Silver-color;
+    @include tablet {
+      @include tablet_desktop_subheader;
+    }
+  }
+
+  &__description-input {
+    width: 100%;
+    padding: 0.5rem 0 4rem 0.5rem;
+    padding-left: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid $Mercury-color;
+    border-radius: 0.25rem;
+    background-color: $Alabaster-color;
+    @include body-copy;
+    color: $BrainFlix-Black-color;
+    margin-bottom: 1rem;
+    @include tablet {
+      @include tablet_desktop_body-copy;
+    }
+  }
+
+  &__upload-image {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+    @include tablet {
+      width: 21rem;
+      margin-bottom: 2.25rem;
+    }
+    @include desktop {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__button-publish {
+    height: 2.5rem;
+    width: 100%;
+    @include body-copy;
+    border: 1px solid $Mercury-color;
+    background-color: $BrainFlix-Blue-color;
+    background-image: url(../../assets/images/icons/upload.svg);
+    background-repeat: no-repeat;
+    background-position: 0.3125rem 0.5625rem;
+    color: $White-color;
+    border-radius: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    cursor: pointer;
+    @include tablet {
+      width: 25%;
+      @include tablet_desktop_body-copy;
+    }
+
+    @include desktop {
+      width: 15%;
+    }
+  }
+
+  &__button-cancel {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    @include body-copy;
+    color: $BrainFlix-Blue-color;
+    @include tablet {
+      width: 20%;
+      @include tablet_desktop_body-copy;
+    }
+  }
+
+  &__form-button-container {
+    @include tablet {
+      border-top: 1px solid $Mercury-color;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: end;
+    }
+  }
+
+  &__form {
+    @include desktop {
+      width: 100%;
+      margin-left: 1.5rem;
+    }
+  }
+
+  &__box {
+    @include desktop {
+      display: flex;
+      align-items: baseline;
+    }
+  }
+}
