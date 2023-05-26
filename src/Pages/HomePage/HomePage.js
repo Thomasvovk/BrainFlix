@@ -1,5 +1,3 @@
-// import videoList from "../../data/videos.json";
-// import videoDetails from "../../data/video-details.json";
 import Hero from "../../components/Hero/Hero";
 import VideoDescription from "../../components/VideoDescription/VideoDescription";
 import Comments from "../../components/Comments/Comments";
@@ -11,63 +9,35 @@ import { useParams } from "react-router-dom";
 const apiUrl = "https://project-2-api.herokuapp.com/videos";
 const apiKey = "5003e7fd-6220-4f00-bb9e-52f793c038d9";
 
-function HomePage({ videoList }) {
-  const videoId = useParams();
-
+function HomePage() {
   const [defaultVideoId, setDefaultVideoId] = useState(null);
 
+  const { id } = useParams();
+  console.log(id);
+
   useEffect(() => {
-    axios
-      .get(`${apiUrl}?api_key=${apiKey}`)
-      .then((response) => setDefaultVideoId(response.data[0].id));
+    axios.get(`${apiUrl}?api_key=${apiKey}`).then((response) => {
+      setDefaultVideoId(response.data[0].id);
+    });
   }, []);
 
-  if (!defaultVideoId) {
-    return <p>Loading...</p>;
+  const activeVideoId = id || defaultVideoId;
+
+  {
+    return (
+      <>
+        <Hero starVideoId={activeVideoId} />
+        <div className="videos-desktop">
+          <div className="videos-desktop__left-container">
+            <VideoDescription starVideoId={activeVideoId} />
+            <Comments starVideoId={activeVideoId} />
+          </div>
+          <Videos starVideoId={activeVideoId} />
+        </div>
+      </>
+    );
+    // return <Hero current={currentId} />;
   }
-
-  let currentId;
-
-  if (!videoId) {
-    currentId = videoId;
-  } else {
-    currentId = defaultVideoId;
-  }
-
-  // useEffect(() => {
-  //   axios.get(`${apiUrl}?api_key=${apiKey}`).then((response) => {
-  //     setVideoList(response.data);
-  //   });
-  // }, []);
-
-  // const updatedVideoList = videoList.filter((video) => {
-  //   return defaultVideo !== video.id;
-  // });
-
-  // const updateStarVideo = (id) => {
-  //   const updatedVideo = videoDetails.find((video) => {
-  //     return id === video.id;
-  //   });
-  //   setStarVideo(updatedVideo);
-  // };
-
-  // return (
-  //   <>
-  //     <Hero starVideo={videoList} />
-  //     <div className="videos-desktop">
-  //       <div className="videos-desktop__left-container">
-  //         <VideoDescription starVideo={videoList} />
-  //         <Comments starVideo={videoList} />
-  //       </div>
-  //       <Videos
-  //         updateStarVideo={updateStarVideo}
-  //         videoList={updatedVideoList}
-  //       />
-  //     </div>
-  //   </>
-  // );
-
-  return <Hero current={currentId} />;
 }
 
 export default HomePage;

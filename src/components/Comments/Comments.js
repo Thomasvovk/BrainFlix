@@ -1,7 +1,29 @@
 import "../Comments/Comments.scss";
 import profileImage from "../../assets/images/Mohan-muruge.jpg";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
-function Comments({ starVideo }) {
+const apiUrl = "https://project-2-api.herokuapp.com/videos";
+const apiKey = "5003e7fd-6220-4f00-bb9e-52f793c038d9";
+
+function Comments({ starVideoId }) {
+  const [currentComments, setCurrentComments] = useState(null);
+
+  useEffect(() => {
+    if (starVideoId === null) {
+      return;
+    }
+    axios
+      .get(`${apiUrl}/${starVideoId}/?api_key=${apiKey}`)
+      .then((response) => {
+        setCurrentComments(response.data.comments);
+      });
+  }, [starVideoId]);
+
+  if (currentComments === null) {
+    return <h1>Loading...</h1>;
+  }
+
   return (
     <>
       <section className="comments-section">
@@ -34,7 +56,7 @@ function Comments({ starVideo }) {
           </div>
           <div className="comments-section__posted-container">
             {/* Map loop over my coments  */}
-            {starVideo.comments.map((commentObject) => {
+            {currentComments.map((commentObject) => {
               return (
                 <div className="comments-section__container">
                   <div className="comments-section__container-profile">
