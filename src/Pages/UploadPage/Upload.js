@@ -25,7 +25,7 @@ function Upload() {
           />
         </div>
         <form onSubmit={handleSubmit} className="video-upload__form">
-          <label className="video-upload__video-title" for="title">
+          <label className="video-upload__video-title" htmlFor="title">
             TITLE YOUR VIDEO{" "}
           </label>
           <input
@@ -34,7 +34,10 @@ function Upload() {
             id="title"
             placeholder="Add a title to your video"
           ></input>
-          <label className="video-upload__video-description" for="description">
+          <label
+            className="video-upload__video-description"
+            htmlFor="description"
+          >
             ADD A VIDEO DESCRIPTION
           </label>
           <input

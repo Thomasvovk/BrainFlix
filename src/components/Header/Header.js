@@ -7,9 +7,9 @@ function Header() {
   return (
     <div className="header">
       <Link to="/">
-        <logo className="header__logo">
+        <div className="header__logo">
           <img className="header__logo-img" src={logo} alt="Logo" />
-        </logo>
+        </div>
       </Link>
 
       {/* Search Bar  */}

@@ -32,7 +32,7 @@ function Videos({ starVideoId }) {
           {/* map loop over next videos */}
           {filteredVideoList.map((video) => {
             return (
-              <Link to={"/" + video.id}>
+              <Link to={"/" + video.id} key={video.id}>
                 <div className="videos__item">
                   <div className="videos__block">
                     <img

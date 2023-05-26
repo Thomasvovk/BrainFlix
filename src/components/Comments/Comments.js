@@ -58,7 +58,10 @@ function Comments({ starVideoId }) {
             {/* Map loop over my coments  */}
             {currentComments.map((commentObject) => {
               return (
-                <div className="comments-section__container">
+                <div
+                  className="comments-section__container"
+                  key={commentObject.id}
+                >
                   <div className="comments-section__container-profile">
                     <div className="comments-section__container-profile-img"></div>
                   </div>

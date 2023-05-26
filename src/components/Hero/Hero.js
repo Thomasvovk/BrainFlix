@@ -16,6 +16,9 @@ function Hero({ starVideoId }) {
       .get(`${apiUrl}/${starVideoId}/?api_key=${apiKey}`)
       .then((response) => {
         setCurrentHero(response.data);
+      })
+      .catch((err) => {
+        console.error(err);
       });
   }, [starVideoId]);
 
