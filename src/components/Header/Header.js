@@ -6,11 +6,12 @@ import profileImage from "../../assets/images/Mohan-muruge.jpg";
 function Header() {
   return (
     <div className="header">
-      <a href="/">
+      <Link to="/">
         <logo className="header__logo">
           <img className="header__logo-img" src={logo} alt="Logo" />
         </logo>
-      </a>
+      </Link>
+
       {/* Search Bar  */}
       <div className="header__container">
         <input
@@ -25,7 +26,9 @@ function Header() {
           alt="profile image"
         />
         {/* Upload Button */}
-        <button className="header__button">UPLOAD</button>
+        <Link className="header__button" to="/upload">
+          <button>UPLOAD</button>
+        </Link>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import "../Videos/Videos.scss";
 
-function Videos({ updateStarVideo, videoList }) {
+function Videos({ videoList }) {
   return (
     <section className="videos">
       <div className="videos__list">
@@ -12,9 +12,9 @@ function Videos({ updateStarVideo, videoList }) {
               <div
                 className="videos__item"
                 // onClick event
-                onClick={() => {
-                  updateStarVideo(video.id);
-                }}
+                // onClick={() => {
+                //   updateStarVideo(video.id);
+                // }}
               >
                 <div className="videos__block">
                   <img
