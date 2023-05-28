@@ -94,10 +94,16 @@
     justify-content: center;
     align-items: center;
     margin-top: 16px;
+    text-decoration: none;
     @include tablet {
       width: 30%;
       @include tablet_desktop_body-copy;
     }
+  }
+  &__button--center {
+    background-color: $BrainFlix-Blue-color;
+    color: $White-color;
+    border: none;
   }
 }
 

@@ -37,6 +37,7 @@
 
   &__video-title {
     @include subheader;
+
     color: $Silver-color;
     @include tablet {
       @include tablet_desktop_subheader;
@@ -114,10 +115,6 @@
     @include tablet {
       width: 25%;
       @include tablet_desktop_body-copy;
-    }
-
-    @include desktop {
-      width: 15%;
     }
   }
 

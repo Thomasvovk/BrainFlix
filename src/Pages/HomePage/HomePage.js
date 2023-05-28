@@ -3,9 +3,9 @@ import VideoDescription from "../../components/VideoDescription/VideoDescription
 import Comments from "../../components/Comments/Comments";
 import Videos from "../../components/Videos/Videos";
 import { useState, useEffect } from "react";
-import axios from "axios";
 import { useParams } from "react-router-dom";
-
+import axios from "axios";
+// API info
 const apiUrl = "https://project-2-api.herokuapp.com/videos";
 const apiKey = "5003e7fd-6220-4f00-bb9e-52f793c038d9";
 
@@ -36,7 +36,6 @@ function HomePage() {
         </div>
       </>
     );
-    // return <Hero current={currentId} />;
   }
 }
 

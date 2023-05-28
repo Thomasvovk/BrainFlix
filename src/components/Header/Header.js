@@ -27,7 +27,7 @@ function Header() {
         />
         {/* Upload Button */}
         <Link className="header__button" to="/upload">
-          <button>UPLOAD</button>
+          <button className="header__button--center">UPLOAD</button>
         </Link>
       </div>
     </div>
