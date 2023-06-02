@@ -3,8 +3,6 @@ import profileImage from "../../assets/images/Mohan-muruge.jpg";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-// const apiUrl = "https://project-2-api.herokuapp.com/videos";
-// const apiKey = "5003e7fd-6220-4f00-bb9e-52f793c038d9";
 const apiUrl = "http://localhost:8080/videos";
 
 function Comments({ starVideoId }) {
@@ -14,20 +12,27 @@ function Comments({ starVideoId }) {
     if (starVideoId === null) {
       return;
     }
-    axios.get(`${apiUrl}/${starVideoId}`).then((response) => {
-      setCurrentComments(response.data.comments);
-    });
+    axios
+      .get(`${apiUrl}/${starVideoId}`)
+      .then((response) => {
+        setCurrentComments(response.data.comments);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   }, [starVideoId]);
 
   if (currentComments === null) {
-    return <h1>Loading...</h1>;
+    return <span class="loader"></span>;
   }
 
   return (
     <>
       <section className="comments-section">
         <div className="comments-section__allcomments">
-          <h2 className="comments-section__subheader">3 Comments</h2>
+          <h2 className="comments-section__subheader">
+            {currentComments.length} Comments
+          </h2>
           <div className="comments-section__block">
             <img
               className="comments-section__profile-image"

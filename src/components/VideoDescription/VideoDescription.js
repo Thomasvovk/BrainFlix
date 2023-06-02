@@ -4,9 +4,6 @@ import likeImg from "../../assets/images/icons/likes.svg";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-// const apiUrl = "https://project-2-api.herokuapp.com/videos";
-// const apiKey = "5003e7fd-6220-4f00-bb9e-52f793c038d9";
-
 const apiUrl = "http://localhost:8080/videos";
 
 function VideoDescription({ starVideoId }) {
@@ -16,13 +13,18 @@ function VideoDescription({ starVideoId }) {
     if (starVideoId === null) {
       return;
     }
-    axios.get(`${apiUrl}/${starVideoId}`).then((response) => {
-      setStarVideo(response.data);
-    });
+    axios
+      .get(`${apiUrl}/${starVideoId}`)
+      .then((response) => {
+        setStarVideo(response.data);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   }, [starVideoId]);
 
   if (startVideo === null) {
-    return <h1>Loading...</h1>;
+    return <span class="loader"></span>;
   }
 
   return (

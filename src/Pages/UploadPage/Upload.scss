@@ -124,6 +124,7 @@
     display: flex;
     justify-content: center;
     cursor: pointer;
+
     @include body-copy;
     color: $BrainFlix-Blue-color;
     @include tablet {
@@ -153,5 +154,8 @@
       display: flex;
       align-items: baseline;
     }
+  }
+  &__cancel-container {
+    text-decoration: none;
   }
 }

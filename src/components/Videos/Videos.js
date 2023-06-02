@@ -5,21 +5,23 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 function Videos({ starVideoId }) {
-  // const apiUrl = "https://project-2-api.herokuapp.com/videos";
-  // const apiKey = "5003e7fd-6220-4f00-bb9e-52f793c038d9";
-
   const apiUrl = "http://localhost:8080/videos";
 
   const [videoList, setVideoList] = useState([]);
 
   useEffect(() => {
-    axios.get(`${apiUrl}`).then((response) => {
-      setVideoList(response.data);
-    });
+    axios
+      .get(`${apiUrl}`)
+      .then((response) => {
+        setVideoList(response.data);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   }, []);
 
   if (videoList === null) {
-    return <h1>Loading...</h1>;
+    return <span class="loader"></span>;
   }
 
   const filteredVideoList = videoList.filter((video) => {

@@ -8,6 +8,7 @@ import axios from "axios";
 function Upload() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+
   function handleTitleChange(event) {
     const data = event.target.value;
     setTitle(data);
@@ -69,7 +70,9 @@ function Upload() {
             <button type="submit" className="video-upload__button-publish">
               PUBLISH
             </button>
-            <div className="video-upload__button-cancel">CANCEL</div>
+            <Link to="/" className="video-upload__cancel-container">
+              <div className="video-upload__button-cancel">CANCEL</div>
+            </Link>
           </div>
         </form>
       </div>
