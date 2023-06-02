@@ -3,11 +3,26 @@ import uploadImage from "../../assets/images/Upload-video-preview.jpg";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function Upload() {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  function handleTitleChange(event) {
+    const data = event.target.value;
+    setTitle(data);
+  }
+  function handleDescriptionChange(event) {
+    const data = event.target.value;
+    setDescription(data);
+  }
   const navigate = useNavigate();
   function handleSubmit(event) {
     event.preventDefault();
+    axios.post("http://localhost:8080/videos", {
+      title: title,
+      description: description,
+    });
     alert("You form has been sucessfully submitted");
     navigate("/");
   }
@@ -32,7 +47,9 @@ function Upload() {
             className="video-upload__title-input"
             name="title"
             id="title"
+            onChange={handleTitleChange}
             placeholder="Add a title to your video"
+            value={title}
           ></input>
           <label
             className="video-upload__video-description"
@@ -44,6 +61,8 @@ function Upload() {
             className="video-upload__description-input"
             name="description"
             id="description"
+            onChange={handleDescriptionChange}
+            value={description}
             placeholder="Add a description to your video"
           ></input>
           <div className="video-upload__form-button-container">

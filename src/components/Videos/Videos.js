@@ -5,13 +5,15 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 function Videos({ starVideoId }) {
-  const apiUrl = "https://project-2-api.herokuapp.com/videos";
-  const apiKey = "5003e7fd-6220-4f00-bb9e-52f793c038d9";
+  // const apiUrl = "https://project-2-api.herokuapp.com/videos";
+  // const apiKey = "5003e7fd-6220-4f00-bb9e-52f793c038d9";
+
+  const apiUrl = "http://localhost:8080/videos";
 
   const [videoList, setVideoList] = useState([]);
 
   useEffect(() => {
-    axios.get(`${apiUrl}?api_key=${apiKey}`).then((response) => {
+    axios.get(`${apiUrl}`).then((response) => {
       setVideoList(response.data);
     });
   }, []);
