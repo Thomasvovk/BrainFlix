@@ -1,13 +1,11 @@
 import Hero from "../../components/Hero/Hero";
 import VideoDescription from "../../components/VideoDescription/VideoDescription";
 import Comments from "../../components/Comments/Comments";
-import Videos from "../../components/Videos/Videos";
+import Videos from "../../components/nextVideos/nextVideos";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-
-// API info
-const apiUrl = "http://localhost:8080/videos";
+import { apiUrl } from "../../Pages/Utilities/ApiPage";
 
 function HomePage() {
   const [defaultVideoId, setDefaultVideoId] = useState(null);

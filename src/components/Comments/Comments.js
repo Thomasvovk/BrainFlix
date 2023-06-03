@@ -2,8 +2,7 @@ import "../Comments/Comments.scss";
 import profileImage from "../../assets/images/Mohan-muruge.jpg";
 import { useEffect, useState } from "react";
 import axios from "axios";
-
-const apiUrl = "http://localhost:8080/videos";
+import { apiUrl } from "../../Pages/Utilities/ApiPage";
 
 function Comments({ starVideoId }) {
   const [currentComments, setCurrentComments] = useState(null);
@@ -23,7 +22,7 @@ function Comments({ starVideoId }) {
   }, [starVideoId]);
 
   if (currentComments === null) {
-    return <span class="loader"></span>;
+    return <span className="loader"></span>;
   }
 
   return (

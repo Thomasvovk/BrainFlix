@@ -1,12 +1,10 @@
-import "../Videos/Videos.scss";
+import "../nextVideos/nextVideos.scss";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { apiUrl } from "../../Pages/Utilities/ApiPage";
 
-function Videos({ starVideoId }) {
-  const apiUrl = "http://localhost:8080/videos";
-
+function nextVideos({ starVideoId }) {
   const [videoList, setVideoList] = useState([]);
 
   useEffect(() => {
@@ -59,4 +57,4 @@ function Videos({ starVideoId }) {
   );
 }
 
-export default Videos;
+export default nextVideos;

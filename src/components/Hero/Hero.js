@@ -1,8 +1,7 @@
 import "../Hero/Hero.scss";
 import axios from "axios";
 import { useState, useEffect } from "react";
-
-const apiUrl = "http://localhost:8080/videos";
+import { apiUrl } from "../../Pages/Utilities/ApiPage";
 
 function Hero({ starVideoId }) {
   const [currentHero, setCurrentHero] = useState(null);
@@ -22,7 +21,7 @@ function Hero({ starVideoId }) {
   }, [starVideoId]);
 
   if (currentHero === null) {
-    return <span class="loader"></span>;
+    return <span className="loader"></span>;
   }
 
   return (

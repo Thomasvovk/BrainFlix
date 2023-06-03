@@ -3,8 +3,7 @@ import viewImg from "../../assets/images/icons/views.svg";
 import likeImg from "../../assets/images/icons/likes.svg";
 import { useEffect, useState } from "react";
 import axios from "axios";
-
-const apiUrl = "http://localhost:8080/videos";
+import { apiUrl } from "../../Pages/Utilities/ApiPage";
 
 function VideoDescription({ starVideoId }) {
   const [startVideo, setStarVideo] = useState(null);
@@ -24,7 +23,7 @@ function VideoDescription({ starVideoId }) {
   }, [starVideoId]);
 
   if (startVideo === null) {
-    return <span class="loader"></span>;
+    return <span className="loader"></span>;
   }
 
   return (
